@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advait-bookings</title>
+
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/436d1b6991.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- style.css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header id="navigation-bar">
+        <!-- Navbar Info -->
+        <div class="navbar__info d-flex justify-content-between align-items-center pt-2 px-5">
+            <div class="navbar__social-links">
+                <a href=""><i class="fs-5 fa-brands px-2 py-2 fa-facebook-f facebook-blue"></i></a>
+                <a href=""><i class="fs-5 fa-brands px-2 py-2 fa-twitter twitter-blue"></i></a>
+                <a href=""><i class="fs-5 fa-brands px-2 py-2 fa-youtube youtube-red"></i></a>
+            </div>
+            <div class="navbar__contacts py-3 d-flex">
+                <div class="px-2"><i class="fa-solid fa-mobile-screen-button"></i> +91 9886151966</div>
+                <div class="px-2"><i class="fa-solid fa-envelope"></i> care@advaitbookings.com</div>
+            </div>
+        </div>
+
+        <!-- Navbar Menu -->
+        <nav class="navbar navbar__menu navbar-expand-lg px-5">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand fw-semibold font-purple_10" href="#">Advaitbookings</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-1">
+                            <a class="nav-link fw-semibold" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link fw-semibold" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link fw-semibold" href="#">Holidays</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link fw-semibold" href="#">Special Offer</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link fw-semibold" href="#">Visa/Forex</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link fw-semibold" href="#">Agent Login</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link fw-semibold" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <!-- Button to trigger login modal -->
+                    <button type="button" class="btn dark-button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content login-modal">
+                                <div class="modal-header">
+                                    <h5 class="modal-title font-purple_10 text-md" id="loginModal">Login to your account</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input class="form-control me-2 mb-2 text-xsm" type="text" placeholder="Username" aria-label="Username">
+                                    <input class="form-control me-2 text-xsm" type="password" placeholder="Password" aria-label="Username">
+                                </div>
+                                <div class="modal-footer">
+                                    <div>
+                                        <button type="button" class="btn dark-button text-xsm">Login</button>
+                                        <button type="button" class="btn dark-button text-xsm">Sign Up</button>
+                                    </div>
+                                    <button type="button" class="btn dark-button text-xsm">Forgot Password</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Fixed buttons -->
+
+        <!-- Query Modal btn-->
+        <div id="send-query-btn">
+            <button type="button" class="dark-button btn text-xsm" data-bs-toggle="modal" data-bs-target="#queryModal">
+                <i class="fa-solid fa-envelope-open-text"></i>
+            </button>
+        </div>
+        <!-- Query Form -->
+        <div class="modal fade" id="queryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content query-modal">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-purple_10 text-md" id="exampleModalLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <input class="form-control text-xsm my-2 me-2" type="input" placeholder="Name" aria-label="Search">
+                        </div>
+                        <div>
+                            <input class="form-control text-xsm my-2 me-2" type="email" placeholder="Email" aria-label="Search">
+                        </div>
+                        <div>
+                            <input class="form-control text-xsm my-2 me-2" type="input" placeholder="Phone No." aria-label="Search">
+                        </div>
+                        <div class="form-floating my-2">
+                            <textarea class="form-control" placeholder="Hi there !" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Message</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label text-xsm" for="flexCheckDefault">
+                                I agree to Advaitbookings Terms & Conditions
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn dark-button">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="whats-app-btn">
+            <a class="fs-1 whatsapp-green"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </div>
+
+        <!-- Booking Section -->
+        <section class="booking-section d-flex align-items-center">
+            <div class="booking-container fw-semibold">
+                <div class="booking-wrapper">
+                    <ul class="d-flex justify-content-center booking__menu">
+                        <li class="px-2"><button id="flight-tab" class="btn dark-outline-button text-sm"><i class="fa-solid fa-plane-departure"></i>
+                                flights</button></li>
+                        <li class="px-2"><button id="hotel-tab" class="btn dark-outline-button text-sm"><i class="fa-solid fa-bed"></i> hotels</button></li>
+                        <li class="px-2"><button id="bus-tab" class="btn dark-outline-button text-sm"><i class="fa-solid fa-bus"></i> bus</button></li>
+                    </ul>
+
+                    <!-- Flight booking form -->
+                    <form id="flight-booking-form" class="booking__sub-menu text-xsm">
+                        <div class="d-flex flex-row py-2 justify-content-center">
+                            <div class="form-check pe-3">
+                                <input class="form-check-input" type="radio" name="flight-type" id="oneWay" value="option1">
+                                <label class="form-check-label" for="oneWay">
+                                    One Way
+                                </label>
+                            </div>
+                            <div class="form-check pe-3">
+                                <input class="form-check-input" type="radio" name="flight-type" id="roundTrip" value="option2" checked>
+                                <label class="form-check-label" for="roundTrip">
+                                    Round Trip
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flight-type" id="multiTrip" value="option2">
+                                <label class="form-check-label" for="multiTrip">
+                                    Multi Trip
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- One Way / Round Trip flight booking -->
+                        <div id="flight-booking-one-two">
+                            <div class="bookings-flex-box">
+                                <input id="flightDepartFrom" class="form-control my-2 me-2 text-xsm" type="search" placeholder="Depart From" aria-label="Search">
+                                <input id="flightGoingTo" class="form-control my-2 me-2 text-xsm" type="search" placeholder="Going To" aria-label="Search">
+                            </div>
+                            <div class="bookings-flex-box">
+                                <div class="input-group date my-2 me-2" id="datepicker">
+                                    <input type="date" class="form-control text-xsm" id="flightsFromDate" />
+                                </div>
+                                <div class="input-group date my-2 me-2" id="datepicker">
+                                    <input type="date" class="form-control text-xsm" id="flightsToDate" />
+                                </div>
+                            </div>
+                            <div class="grid py-2">
+                                <div class="bookings-flex-box">
+                                    <div class="col d-flex">
+                                        <select class="form-select me-2 text-xsm" aria-label="Default select example">
+                                            <option value="adult" selected>Adult</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                        <select class="form-select me-2 text-xsm" aria-label="Default select example">
+                                            <option value="children" selected>Children</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                        <select class="form-select me-2 text-xsm" aria-label="Default select example">
+                                            <option value="infant" selected>Infant</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col my-2 me-2">
+                                        <select class="form-select text-xsm" aria-label="Default select example">
+                                            <option value="economy" selected>Economy</option>
+                                            <option value="business">Business</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row py-2 justify-content-center">
+                                <div class="form-check pe-2">
+                                    <input class="form-check-input" type="radio" name="fare-type" id="normalFare" value="option1" checked>
+                                    <label class="form-check-label" for="normalFare">
+                                        Normal Fare
+                                    </label>
+                                </div>
+                                <div class="form-check pe-2" id="lcc">
+                                    <input class="form-check-input" type="radio" name="fare-type" id="lcc" value="option2">
+                                    <label class="form-check-label" for="lcc">
+                                        Special Return Fare(LCC)
+                                    </label>
+                                </div>
+                                <div class="form-check" id="gdc">
+                                    <input class="form-check-input" type="radio" name="fare-type" id="gds" value="option2">
+                                    <label class="form-check-label" for="gds">
+                                        GDS Special Return Fare
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Multi flight booking -->
+                        <div id="flight-booking-multi" class="hidden">
+                            <div class="bookings-flex-box">
+                                <input id="multiFlightDepartFrom1" class="form-control my-2 me-2 text-xsm" type="search" placeholder="Depart From"
+                                    aria-label="Search">
+                                <input id="multiFlightGoingTo1" class="form-control my-2 me-2 text-xsm" type="search" placeholder="Going To" aria-label="Search">
+                                <div class="input-group date my-2 me-2" id="multiDatePickerFrom">
+                                    <input type="date" class="form-control text-xsm" id="multiFlightsFromDate" />
+                                </div>
+                            </div>
+                            <div class="bookings-flex-box">
+                                <input id="multiFlightDepartFrom2" class="form-control my-2 me-2 text-xsm" type="search" placeholder="Depart From"
+                                    aria-label="Search">
+                                <input id="multiFlightGoingTo2" class="form-control my-2 me-2 text-xsm" type="search" placeholder="Going To" aria-label="Search">
+                                <div class="input-group date my-2 me-2" id="multiDatePickerFrom">
+                                    <input type="date" class="form-control text-xsm" id="multiFlightsToDate" />
+                                </div>
+                            </div>
+
+                            <!-- Adding more options -->
+                            <div class="more-options-container">
+                                <!-- populated using JS -->
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button id="add-more-fields" class="btn dark-button">Add More</button>
+                            </div>
+
+                            <div class="bookings-flex-box">
+                                <div class="col d-flex">
+                                    <select class="form-select my-2 me-2 text-xsm" aria-label="Default select example">
+                                        <option value="adult" selected>Adult</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                    <select class="form-select my-2 me-2 text-xsm" aria-label="Default select example">
+                                        <option value="children" selected>Children</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                    <select class="form-select my-2 me-2 text-xsm" aria-label="Default select example">
+                                        <option value="infant" selected>Infant</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="col my-2 me-2">
+                                    <select class="form-select text-xsm" aria-label="Default select example">
+                                        <option value="economy" selected>Economy</option>
+                                        <option value="business">Business</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center py-3">
+                            <button class="btn dark-button" type="submit">Search Flights</button>
+                        </div>
+                    </form>
+
+                    <!-- Hotel booking form -->
+                    <form action="" id="hotel-booking-form" class="booking__sub-menu text-xsm hidden">
+                        <div class="bookings-flex-box">
+                            <input class="form-control my-2 me-2 text-xsm" type="search" placeholder="Enter City" aria-label="Search">
+                            <input class="form-control my-2 me-2 text-xsm" type="search" placeholder="Nationality" value="Indian" aria-label="Search">
+                        </div>
+                        <div class="bookings-flex-box">
+                            <div class="input-group date my-2 me-2" id="datepicker">
+                                <input type="date" class="form-control text-xsm" id="hotelFromDate" />
+                            </div>
+                            <div class="input-group date my-2 me-2" id="datepicker">
+                                <input type="date" class="form-control text-xsm" id="hotelToDate" />
+                            </div>
+                        </div>
+                        <div class="grid py-2">
+                            <div class="bookings-flex-box">
+                                <div class="col d-flex">
+                                    <select class="form-select my-2 me-2 text-xsm" aria-label="Default select example">
+                                        <option selected value="rooms">Rooms</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                    <select class="form-select my-2 me-2 text-xsm" aria-label="Default select example">
+                                        <option value="adult" selected>Adult</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                    <select class="form-select my-2 me-2 text-xsm" aria-label="Default select example">
+                                        <option value="children" selected>Children</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="col my-2 me-2">
+                                    <select class="form-select text-xsm" aria-label="Default select example">
+                                        <option value="budget" selected>Budget Hotel</option>
+                                        <option value="1_star">1 star</option>
+                                        <option value="2_star">2 star</option>
+                                        <option value="3_star">3 star</option>
+                                        <option value="4_star">4 star</option>
+                                        <option value="5_star">5 star</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center py-3">
+                            <button class="btn dark-button" type="submit">Search Hotels</button>
+                        </div>
+                    </form>
+
+                    <!-- Bus booking form -->
+                    <form action="" id="bus-booking-form" class="booking__sub-menu text-xsm hidden">
+                        <div class="bookings-flex-box">
+                            <input class="form-control my-2 me-2 text-xsm" type="search" placeholder="Depart From" aria-label="Search">
+                            <input class="form-control my-2 me-2 text-xsm" type="search" placeholder="Going To" aria-label="Search">
+                        </div>
+                        <div class="bookings-flex-box">
+                            <div class="input-group date my-2 me-2" id="datepicker">
+                                <input type="date" class="form-control text-xsm" id="busOnDate" />
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center py-3">
+                            <button class="btn dark-button" type="submit">Search Bus</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles-container">
+            <div class="container py-5">
+                <div class="row text-center">
+                    <h1 class="text-lg font-purple_10">Explore <span class="font-purple_40">the latest</span> Destinations</h1>
+                    <p class="text-md fw-semibold font-purple_10">In a travel democracy you have access to the best holidays anyone has to offer, at the best
+                        prices</p>
+                </div>
+                <!-- Row 1 -->
+                <div class="row">
+                    <div class="col-md-4 p-2 card-container">
+                        <div class="card h-100">
+                            <img src="https://wallpaperaccess.com/full/3068300.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <h6 class="card-title font-purple_10 text-sm">Goa Holidays</h6>
+                                <p class="card-text text-xsm font-purple_20">25+ options</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-2 card-container">
+                        <div class="card h-100">
+                            <img src="https://wallpaperaccess.com/full/1635203.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <h6 class="card-title font-purple_10 text-sm">Kerela Holidays</h6>
+                                <p class="card-text text-xsm font-purple_20">25+ options</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-2 card-container">
+                        <div class="card h-100">
+                            <img src="https://cutewallpaper.org/21/kashmir-wallpaper/Kashmir-Bing-Wallpaper-Download.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <h6 class="card-title font-purple_10 text-sm">Kashmir Holidays</h6>
+                                <p class="card-text text-xsm font-purple_20">3+ options</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="row">
+                    <div class="col-md-4 p-2 card-container">
+                        <div class="card h-100">
+                            <img src="https://wallpapercave.com/wp/wp5296534.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <h6 class="card-title font-purple_10 text-sm">Andaman Holidays</h6>
+                                <p class="card-text text-xsm font-purple_20">25+ options</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-2 card-container">
+                        <div class="card h-100">
+                            <img src="https://assets.cntraveller.in/photos/60e3184b28c0d620a636f0df/master/w_1920,h_1080,c_limit/Himachal-beyond-manali-sangla1.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <h6 class="card-title font-purple_10 text-sm">Himachal Holidays</h6>
+                                <p class="card-text text-xsm font-purple_20">25+ options</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-2 card-container">
+                        <div class="card h-100">
+                            <img src="https://wallpaper.dog/large/11034049.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <h6 class="card-title font-purple_10 text-sm">Dubai Holidays</h6>
+                                <p class="card-text text-xsm font-purple_20">25+ options</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="row">
+                    <div class="col-md-4 p-2 card-container">
+                        <div class="card h-100">
+                            <img src="https://wallpapercave.com/wp/wp2113003.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <h6 class="card-title font-purple_10 text-sm">Singapore Holidays</h6>
+                                <p class="card-text text-xsm font-purple_20">25+ options</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-2 card-container">
+                        <div class="card h-100">
+                            <img src="https://wallpaperaccess.com/full/4098362.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <h6 class="card-title font-purple_10 text-sm">Thailand Holidays</h6>
+                                <p class="card-text text-xsm font-purple_20">25+ options</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-2 card-container">
+                        <div class="card h-100">
+                            <img src="https://wallpapercave.com/wp/wp4088786.jpg" class="card-img-top" alt="...">
+                            <div class="card-body p-2">
+                                <h6 class="card-title font-purple_10 text-sm">Maldives Holidays</h6>
+                                <p class="card-text text-xsm font-purple_20">25+ options</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us-container">
+            <div class="container py-5">
+                <div>
+                    <h1></h1>
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <div class="about-us__icon">
+                                <i class="text-lg fa-solid fa-user"></i>
+                            </div>
+                            <div>
+                                <h4 class="pt-3 pb-1 font-purple_10">Welcome</h4>
+                                <p class="font-purple_30">
+                                    Our Agency is in a class of its own. A full service agency, both leisure and cor...
+                                    <br><a class="about-us__links font-purple_30 fw-semibold" href="">more</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="about-us__icon">
+                                <i class="text-lg fa-solid fa-house-chimney-user"></i>
+                            </div>
+                            <div>
+                                <h4 class="pt-3 pb-1 font-purple_10">About Us</h4>
+                                <p class="font-purple_30">
+                                    With the foresight to seize the opportunities in the domestic travel market, bro...
+                                    <br><a class="about-us__links font-purple_30 fw-semibold" href="">more</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="about-us__icon">
+                                <i class="text-lg fa-solid fa-thumbs-up"></i>
+                            </div>
+                            <div>
+                                <h4 class="pt-3 pb-1 font-purple_10">Find Us</h4>
+                                <p class="font-purple_30">
+                                    You can also connect through social media...</p>
+                                <p>
+                                    <a href=""><i class="fs-5 fa-brands px-2 py-2 fa-facebook-f facebook-blue"></i></a>
+                                    <a href=""><i class="fs-5 fa-brands px-2 py-2 fa-twitter twitter-blue"></i></a>
+                                    <a href=""><i class="fs-5 fa-brands px-2 py-2 fa-youtube youtube-red"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <h1 class="text-lg font-purple_10">About Us</h1>
+                    <p class="text-sm">What We Have With the foresight to seize the opportunities in the domestic/international travel market, we offered
+                        travellers the
+                        convenience of online travel bookings at rock-bottom prices. Rapidly, Our Company became the preferred choice of millions of travellers
+                        who were delighted to be empowered by a few mouse clicks! Our company rise has been lead by the vision and the spirit of each one of i..
+                        <br><a class="about-us__links font-purple_30 fw-semibold" href="">more</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Navigation -->
+        <section class="footer-navigation-container container-fluid">
+            <div class="row pb-5 footer-navigation-wrapper">
+                <div class="col-lg-3 px-4 text-center">
+                    <h5 class="font-purple_10">Welcome</h5>
+                    <p class="font-purple_10">
+                        <i class="fa-solid fa-handshake"></i>&emsp;Our Agency is in a class of its own. A full service agency, both leisure and corporate
+                        travel,
+                        with many specialty areas... <a class="about-us__links font-purple_30 fw-semibold" href="">Read More</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 px-4 text-center">
+                    <h5 class="font-purple_10">Address & Contact Info</h5>
+                    <p class="font-purple_10">
+                        <i class="fa-solid fa-location-dot"></i>&emsp;No11(407/52) 28 th C cross,11th Main,Jayanagar 4th Block.Bengaluru 560011
+                    </p>
+                </div>
+                <div class="col-lg-6 px-4">
+                    <h5 class="text-center font-purple_10">Holiday Destination</h5>
+                    <div class="footer-navigation__holiday-menu fw-semibold">
+                        <ul>
+                            <li><a class="footer-navigation__links" href="">Andaman Packages</a></li>
+                            <li><a class="footer-navigation__links" href="">Goa Packages</a></li>
+                            <li><a class="footer-navigation__links" href="">Kashmir Packages</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="footer-navigation__links" href="">Kerala Packages</a></li>
+                            <li><a class="footer-navigation__links" href="">North East Packages</a></li>
+                            <li><a class="footer-navigation__links" href="">Dubai Packages</a></li>
+
+                        </ul>
+                        <ul>
+                            <li><a class="footer-navigation__links" href="">Hong Kong Packages</a></li>
+                            <li><a class="footer-navigation__links" href="">Thailand Packages</a></li>
+                            <li><a class="footer-navigation__links" href="">Singapore Packages</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="pt-5 pb-2 container">
+            <h5 class="text-center font-purple_10">Quick Links</h5>
+            <div class="pt-3 container fw-semibold">
+                <div class="">
+                    <ul class="footer-navigation__links-container text-center">
+                        <li class=""><a href="" class="footer-navigation__links">Ticket Cancelation</a></li>
+                        <li class=""><a href="" class="footer-navigation__links">View/Print Vouchers</a></li>
+                        <li class=""><a href="" class="footer-navigation__links">Visa/Forex</a></li>
+                        <li class=""><a href="" class="footer-navigation__links">Agent Login</a></li>
+                    </ul>
+                    <ul class="footer-navigation__links-container text-center">
+                        <li class=""><a href="" class="footer-navigation__links">Refer & Earn</a></li>
+                        <li class=""><a href="" class="footer-navigation__links">Testimonials</a></li>
+                        <li class=""><a href="" class="footer-navigation__links">Terms of Use</a></li>
+                        <li class=""><a href="" class="footer-navigation__links">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-info-container pt-2 pb-5">
+                <div class="text-xsm">
+                    copyright © 2022 Advaitbookings All Rights Reserved
+                </div>
+                <div>
+                    <a href=""><i class="fs-5 fa-brands px-2 py-2 fa-facebook-f facebook-blue"></i></a>
+                    <a href=""><i class="fs-5 fa-brands px-2 py-2 fa-twitter twitter-blue"></i></a>
+                    <a href=""><i class="fs-5 fa-brands px-2 py-2 fa-youtube youtube-red"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- index.js file Link -->
+    <script src="./index.js"></script>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+
+</html>

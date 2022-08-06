@@ -1,0 +1,382 @@
+/* --------------- Global Styles --------------- */
+body{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
+.bookings-flex-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:426px){
+    .bookings-flex-box{
+        flex-direction: column;
+    }
+}
+
+/* font sizes */
+.text-lg{
+    font-size: 3rem;
+}
+.text-md{
+    font-size: 1.5rem;
+}
+.text-sm{
+    font-size: 1.15rem;
+}
+.text-xsm{
+    font-size: 0.95rem;
+}
+
+@media (max-width: 769px){
+    .text-lg{
+        font-size: 2rem;
+    }
+    .text-md{
+        font-size: 1.25rem;
+    }
+    .text-sm{
+        font-size: 1rem;
+    }
+    .text-xsm{
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 426px){
+    .text-lg{
+        font-size: 1.5rem;
+    }
+    .text-md{
+        font-size: 1rem;
+    }
+    .text-sm{
+        font-size: 0.85rem;
+    }
+    .text-xsm{
+        font-size: 0.75rem;
+    }
+}
+
+/* colors */
+:root {
+    /* Primary color (HS_L) */
+    --purple_10: #371B58;
+    --purple_20: #4C3575;
+    --purple_30: #5B4B8A;
+    --purple_40: #7858A6;
+    --purple_50: #9b7bc9;
+    --purple_60: #A6B1E1;
+    --purple_70: #DCD6F7;
+    --purple_80: #F4EEFF;
+
+    /* Secondary color (HS_L) */
+    --pink_40: #E283A7;
+    --pink_50: #EFBBCF;
+    --cream_40: #FF7F66;
+    --cream_60: #FFAA99;
+    --cream_80: #FFD5CD;
+  }
+
+  /* Other colors */
+  .facebook-blue{
+    color:#4267B2;
+  }
+  .twitter-blue{
+    color:#1DA1F2;
+  }
+  .youtube-red{
+    color:#FF0000;
+  }
+  .whatsapp-green{
+    color:#25D366;
+  }
+
+  /* font-colors */
+  .font-purple_10{
+    color: var(--purple_10);
+  }
+  .font-purple_20{
+    color: var(--purple_20);
+  }
+  .font-purple_30{
+    color: var(--purple_30);
+  }
+  .font-purple_40{
+    color: var(--purple_40);
+  }
+
+  /* buttons */
+  .dark-button{
+    background-color: var(--purple_10);
+    color: var(--purple_80);
+  }
+  .dark-button:hover{
+    background-color: var(--purple_20);
+    color: var(--purple_80);
+  }
+  .dark-outline-button{
+    border: 2px solid var(--purple_10);
+    background-color: var(--purple_70);
+    color: var(--purple_10);
+  }
+  .dark-outline-button:hover{
+    border: 2px solid var(--purple_10);
+    background-color: var(--purple_20);
+    color: var(--purple_80);
+  }
+
+  .fa-brands:hover{
+    transform: scale(1.5);
+  }
+
+/* --------------- Fixed buttond --------------- */
+    #send-query-btn{
+        position: fixed;
+        bottom: 2%; right: 4%;
+        z-index: 50;
+    }
+
+    .query-modal{
+        background-color: var(--purple_80);
+    }
+
+    #whats-app-btn{
+        position: fixed;
+        bottom: 2%; left: 4%;
+        z-index: 50;
+    }
+    #whats-app-btn a:hover{
+        color: #1ae665;
+    }
+
+/* --------------- Navbar Styles --------------- */
+    .navbar__info{
+        background-color: var(--purple_80);
+    }
+    .navbar__menu{
+        background-color: var(--purple_80);
+    }
+
+    .navbar .nav-link:hover{
+        color: var(--purple_20);
+    }
+
+    .login-modal{
+        background-color: var(--purple_80);
+    }
+
+    /* Navbar Info */
+    @media (max-width:600px){
+        .navbar__info{
+            flex-direction: column;
+        }
+    
+        .navbar__contacts{
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    @media(max-width:325px){
+        .modal-footer{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+/* --------------- Booking Section --------------- */
+
+    .booking-section{
+        object-fit: cover;
+        background-attachment: fixed;
+        background-image: url('https://3.bp.blogspot.com/-5vQTc7UBxRA/XFUltHcv0eI/AAAAAAAABz0/-ynSXYBMgD4saeZcKYr-XaLfqKMVMrv0QCKgBGAs/w2880-h1800-c/beach-boat-sunrise-scenery-seascape-17-4K.jpg');
+    }
+
+    .booking-container{
+        padding: 8% 0;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .booking-wrapper{
+        color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Booking Menu */
+    .booking__menu{
+        list-style: none;
+        position: relative;
+    }
+
+    .booking__menu li{
+        display: inline-block;
+    }
+
+    .booking__menu a{
+        display: block;
+        text-decoration: none;
+        padding: 0.25rem 1rem;
+    }
+
+    .booking__sub-menu{
+        min-height: 21vw;
+    }
+
+    .more-options-cross-button:hover{
+        color: red;
+    }
+
+    @media(max-width: 768px){
+        
+    }
+
+    @media(max-width: 425px){
+        .booking__menu{
+            font-size: 0.75rem;
+            padding: 0;
+        }
+        .booking-container{
+            width: 100%;
+            margin: 0;
+        }
+        .booking-wrapper{
+            padding: 1rem;
+        }
+    }
+
+/* --------------- Articles Section --------------- */
+
+    .articles-container{
+        background-color: var(--purple_80);
+    }
+    .card{
+        height: 90%;
+        box-shadow: 1px 1px 5px var(--purple_10);
+    }
+    .card img{
+        object-fit: cover;
+    }
+    .card:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        transition: 0.3s;
+    }
+    .card-body h6, p{
+        padding-left: 2%;
+    }
+
+
+/* --------------- About Us Section --------------- */
+
+    .about-us-container{
+        background-color: var(--purple_70);
+    }
+    /* About Us */
+    .about-us__icon{
+        color: var(--purple_40);
+    }
+    .about-us__icon:hover{
+        transform: scale(1.3);
+        transition: 0.3s;
+        cursor: pointer;
+        color: var(--purple_10);
+    }
+
+    .about-us__links{
+        text-decoration: none;
+    }
+    .about-us__links:hover{
+        color: var(--purple_10);
+    }
+
+/* Footer Navigation */
+
+    .footer-navigation-container{
+        background-color: var(--purple_70);
+    }
+
+    .footer-navigation-wrapper{
+        margin: 0 5rem;
+    }
+
+    .footer-navigation__holiday-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer-navigation-container li{
+        list-style: none;
+    }
+    .footer-navigation__links{
+        text-decoration: none;
+        color: var(--purple_10);
+    }
+    .footer-navigation__links:hover{
+        color: var(--purple_30);
+        text-decoration: underline;
+    }
+
+    @media(max-width:768px){
+        .footer-navigation-wrapper{
+            margin: 0;
+        }
+    }
+    @media(max-width: 425px){
+        .footer-navigation__holiday-menu{
+            flex-direction: column;
+        }
+        .footer-navigation__holiday-menu ul{
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+/* Footer */
+
+    .footer{
+        background-color: var(--purple_80);
+    }
+    .footer li{
+        list-style: none;
+    }
+
+    .footer-navigation__links-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .footer-navigation__links-container li a{
+        margin: 0 1rem;
+    }
+    @media(max-width: 767px){
+        .footer-navigation__links-container{
+            flex-direction: column;
+        }
+    }
+
+    .footer-info-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    @media(max-width: 768px){
+        .footer-info-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .footer-info-container div{
+            padding: 0.25rem 0;
+        }
+    }
